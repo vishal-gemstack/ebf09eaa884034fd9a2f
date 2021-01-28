@@ -24,7 +24,7 @@ const AstroidFinder = (props) => {
     history.push({
       pathname: "/astroidDetail",
       state: {
-        astroidName: astroidName,
+        astroidId: astroidName,
       },
     });
   };
