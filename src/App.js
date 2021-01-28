@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { Switch,Route } from "react-router";
+import  AstroidDetail from "./components/astroidDetail";
+import AstroidFinder from "./components/astroidFinder";
+import Typography from "@material-ui/core/Typography";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <Typography variant="h4" style={{textAlign : 'left'}}>Astroid Finder</Typography>
+      <Switch>
+          <Route path="/" exact>
+                <AstroidFinder />
+           </Route>  
+          <Route path="/astroidDetail">
+                <AstroidDetail/>
+           </Route>  
+      </Switch>
     </div>
   );
 }
